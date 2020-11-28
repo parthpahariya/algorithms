@@ -36,6 +36,7 @@ int[] nums
 Map<Integer, Integer> map = new HashMap<>();
 map.put(key, value);
 map.get(key)
+map.values() # to get all value
 for(Map.Entry<String,String> entry : map.entrySet()){ entry.getKey() , entry.getValue()}
 
 #PriorityQueue
