@@ -1,4 +1,4 @@
-package AlgoImpl;
+package AlgoImpl.DFS;
 
 import java.util.Scanner;
 
