@@ -37,6 +37,7 @@ Map<Integer, Integer> map = new HashMap<>();
 map.put(key, value); #void
 map.get(key) #Integer
 map.values() #Collection<Integer>   #to get all value
+map.keySet() #Set<Integer>
 for(Map.Entry<String,String> entry : map.entrySet()){ entry.getKey() , entry.getValue()}
 
 #PriorityQueue
