@@ -34,9 +34,9 @@ int[] nums
 5. stack.empty() #check empty
 #Map
 Map<Integer, Integer> map = new HashMap<>();
-map.put(key, value);
-map.get(key)
-map.values() # to get all value
+map.put(key, value); #void
+map.get(key) #Integer
+map.values() #Collection<Integer>   #to get all value
 for(Map.Entry<String,String> entry : map.entrySet()){ entry.getKey() , entry.getValue()}
 
 #PriorityQueue
