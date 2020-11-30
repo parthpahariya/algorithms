@@ -1,18 +1,19 @@
-package AlgoImpl.DFS;
+package algoimpl.dfs;
 
 import java.util.Scanner;
 
-public class TreeInIslandProblem {
+public class TreeInIsLandWithIntReturn {
 
 
-    public static void matrix(int[][] mat, int n, int m, boolean[][] vis, int x, int y,int[] arr){
+
+    public static int matrix(int[][] mat, int n, int m, boolean[][] vis, int x, int y){
 
 
         vis[x][y]= true;
-        arr[0]++;
         int[] xmove = new int[]{1,-1,0,0,1,1,-1,-1};
         int[] ymove = new int[]{0,0,1,-1,1,-1,1,-1};
 
+        int val = 1;
         for (int l=0;l<8;l++){
 
             int xnew = x + xmove[l];
@@ -20,10 +21,11 @@ public class TreeInIslandProblem {
 
 
             if (xnew>=0 && xnew<n && ynew >=0 && ynew<m && !vis[xnew][ynew] && mat[xnew][ynew]==1){
-                matrix(mat, n, m, vis,  xnew, ynew,arr);
+                val = val + matrix(mat, n, m, vis,  xnew, ynew);
             }
         }
 
+        return val;
     }
 
     public static void main(String[] args) {
@@ -31,7 +33,7 @@ public class TreeInIslandProblem {
 /*
         3  5
 
-        1 1 1 0 0
+        1 1 1 0 1
         1 0 1 1 0
         1 0 1 0 1
 
@@ -52,23 +54,15 @@ public class TreeInIslandProblem {
 
         boolean[][] vis = new boolean[n][m];
 
-        for (int i=0;i<n;i++){
-            for (int j=0;j<m;j++){
-                System.out.print(matrix[i][j]);
-            }
-            System.out.println();
-        }
-
         int maxm=Integer.MIN_VALUE;
 
 
         for (int i=0;i<n;i++){
             for (int j=0;j<m;j++){
                 if (matrix[i][j]==1){
-                    int[] arr = new int[]{0};
-                    matrix(matrix, n, m , vis, i,j, arr);
-                    if (maxm< arr[0]){
-                        maxm = arr[0];
+                    int val = matrix(matrix, n, m , vis, i,j);
+                    if (maxm< val){
+                        maxm = val;
                     }
 
                 }
@@ -82,4 +76,5 @@ public class TreeInIslandProblem {
 
 
     }
+
 }

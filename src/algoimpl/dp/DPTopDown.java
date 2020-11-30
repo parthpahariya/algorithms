@@ -1,4 +1,4 @@
-package AlgoImpl.DP;
+package algoimpl.dp;
 
 public class DPTopDown {
 

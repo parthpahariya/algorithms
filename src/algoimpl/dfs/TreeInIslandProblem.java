@@ -1,19 +1,18 @@
-package AlgoImpl.DFS;
+package algoimpl.dfs;
 
 import java.util.Scanner;
 
-public class TreeInIsLandWithIntReturn {
+public class TreeInIslandProblem {
 
 
-
-    public static int matrix(int[][] mat, int n, int m, boolean[][] vis, int x, int y){
+    public static void matrix(int[][] mat, int n, int m, boolean[][] vis, int x, int y,int[] arr){
 
 
         vis[x][y]= true;
+        arr[0]++;
         int[] xmove = new int[]{1,-1,0,0,1,1,-1,-1};
         int[] ymove = new int[]{0,0,1,-1,1,-1,1,-1};
 
-        int val = 1;
         for (int l=0;l<8;l++){
 
             int xnew = x + xmove[l];
@@ -21,11 +20,10 @@ public class TreeInIsLandWithIntReturn {
 
 
             if (xnew>=0 && xnew<n && ynew >=0 && ynew<m && !vis[xnew][ynew] && mat[xnew][ynew]==1){
-                val = val + matrix(mat, n, m, vis,  xnew, ynew);
+                matrix(mat, n, m, vis,  xnew, ynew,arr);
             }
         }
 
-        return val;
     }
 
     public static void main(String[] args) {
@@ -33,7 +31,7 @@ public class TreeInIsLandWithIntReturn {
 /*
         3  5
 
-        1 1 1 0 1
+        1 1 1 0 0
         1 0 1 1 0
         1 0 1 0 1
 
@@ -54,15 +52,23 @@ public class TreeInIsLandWithIntReturn {
 
         boolean[][] vis = new boolean[n][m];
 
+        for (int i=0;i<n;i++){
+            for (int j=0;j<m;j++){
+                System.out.print(matrix[i][j]);
+            }
+            System.out.println();
+        }
+
         int maxm=Integer.MIN_VALUE;
 
 
         for (int i=0;i<n;i++){
             for (int j=0;j<m;j++){
                 if (matrix[i][j]==1){
-                    int val = matrix(matrix, n, m , vis, i,j);
-                    if (maxm< val){
-                        maxm = val;
+                    int[] arr = new int[]{0};
+                    matrix(matrix, n, m , vis, i,j, arr);
+                    if (maxm< arr[0]){
+                        maxm = arr[0];
                     }
 
                 }
@@ -76,5 +82,4 @@ public class TreeInIsLandWithIntReturn {
 
 
     }
-
 }
