@@ -58,9 +58,10 @@ public class LongestPalindromicSubstring {
     // Driver Code
     public static void main(String[] args)
     {
-        String str = "aaaabbaa";
+        String str = "aabbaaaaaa";
 
         // Function Call
+        // Ans  = 6
         System.out.print(longest_palindromic_substr(str));
     }
 }
