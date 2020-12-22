@@ -18,7 +18,7 @@ int[] nums
 5. String.valueOf(s)
 6. str.toLowerCase()
 7. String[] arrOfStr = str.split("@")
-8. char[] arrOfChar = str()
+8. char[] arrOfChar = str.toCharArray()
 9. str.replaceAll("\\s", "");
 
 #List<> list
@@ -40,12 +40,13 @@ int[] nums
 4. stack.peek() #peek top element
 5. stack.empty() #check empty
 
-#Map
+#Map (Time complexity is O(1) for all)
 Map<Integer, Integer> map = new HashMap<>();
 map.put(key, value); #void
 map.get(key) #Integer
 map.values() #Collection<Integer>   #to get all value
 map.keySet() #Set<Integer>
+map.remove(key) # remove key
 for(Map.Entry<String,String> entry : map.entrySet()){ entry.getKey() , entry.getValue()}
 
 #PriorityQueue
