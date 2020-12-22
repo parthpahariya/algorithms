@@ -19,12 +19,19 @@ int[] nums
 6. str.toLowerCase()
 7. String[] arrOfStr = str.split("@")
 8. char[] arrOfChar = str()
-9. str.replaceAll("\\s", ""); 
+9. str.replaceAll("\\s", "");
 
-#List<> nums
-1. nums.get(i);
-2. nums.size();
-3. nums.add(p);
+#List<> list
+1. list.get(i);
+2. list.size();
+3. list.add(p);
+4. list.remove(index)
+
+#Queue
+1. Queue<Integer> queue = new ArrayDeque<Integer>(); 
+2. queue.add(i) #void 
+3. queue.poll() #return 
+5. queue.isEmpty() #check empty
 
 #Stack
 1. Stack<Integer> stack = new Stack<Integer>(); 
@@ -32,6 +39,7 @@ int[] nums
 3. stack.pop() #return 
 4. stack.peek() #peek top element
 5. stack.empty() #check empty
+
 #Map
 Map<Integer, Integer> map = new HashMap<>();
 map.put(key, value); #void
