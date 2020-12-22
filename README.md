@@ -25,7 +25,8 @@ int[] nums
 1. list.get(i);
 2. list.size();
 3. list.add(p);
-4. list.remove(index)
+4. list.remove(index) # remove at index #O(n)
+5. list.add(index, element); # add value at index
 
 #Queue
 1. Queue<Integer> queue = new ArrayDeque<Integer>(); 
