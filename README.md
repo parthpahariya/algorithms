@@ -42,15 +42,16 @@ int[] nums
 5. stack.empty() #check empty
 
 #Map (Time complexity is O(1) for all)
-Map<Integer, Integer> map = new HashMap<>();
-map.put(key, value); #void
-map.get(key) #Integer
-map.values() #Collection<Integer>   #to get all value
-map.keySet() #Set<Integer>
-map.remove(key) # remove key
-for(Map.Entry<String,String> entry : map.entrySet()){ entry.getKey() , entry.getValue()}
+1. Map<Integer, Integer> map = new HashMap<>();
+2. map.put(key, value); #void
+3. map.get(key) #Integer
+4. map.values() #Collection<Integer>   #to get all value
+5. map.keySet() #Set<Integer>
+6. map.remove(key) # remove key
+7. for(Map.Entry<String,String> entry : map.entrySet()){ entry.getKey() , entry.getValue()}
 
 #PriorityQueue
 1. PriorityQueue <Integer> pq = new PriorityQueue<Integer>(); 
 2. pq.peek() #peek top element
 3. pq.poll() # return head and remove head
+4. Iterator value = queue.iterator(); while (value.hasNext()) { System.out.println(value.next()); } 
