@@ -29,7 +29,7 @@ int[] nums
 5. list.add(index, element); # add value at index
 
 #Queue
-1. Queue<Integer> queue = new ArrayDeque<Integer>(); 
+1. Queue<Integer> queue = new ArrayDeque<Integer>();
 2. queue.add(i) #void 
 3. queue.poll() #return 
 5. queue.isEmpty() #check empty
