@@ -22,6 +22,7 @@ int[] nums
 9. str.replaceAll("\\s", "");
 
 #List<> list
+1. List<T> list = new ArrayList<T>()
 1. list.get(i);
 2. list.size();
 3. list.add(p);
@@ -29,10 +30,12 @@ int[] nums
 5. list.add(index, element); # add value at index
 
 #Queue
-1. Queue<Integer> queue = new ArrayDeque<Integer>();
-2. queue.add(i) #void 
-3. queue.poll() #return 
-5. queue.isEmpty() #check empty
+1. Dequeue<Integer> queue = new ArrayDeque<Integer>();
+2. queue.addFirst(i) #void 
+3. queue.addLast(i) #void 
+4. queue.pollFirst() #return and remove from First
+5. queue.pollLast() #return and remove from Last
+6. queue.isEmpty() #check empty
 
 #Stack
 1. Stack<Integer> stack = new Stack<Integer>(); 
